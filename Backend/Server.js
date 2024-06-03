@@ -14,7 +14,7 @@ app.use(express.json())
 app.use(cors())
 
 mongoose
-.connect("mongodb+srv://syedafaiza2610:faizanaqi123@clustor1.jukqksg.mongodb.net/")
+// .connect("mongodb+srv://syedafaiza2610:faizanaqi123@clustor1.jukqksg.mongodb.net/")
 .then(() => console.log("Database Connected"))
 .catch((err) => console.log(err))
 app.use(routes)
