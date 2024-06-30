@@ -11,7 +11,11 @@ require('dotenv').config({ path: '../.env' })
 const app = express()
 const PORT = process.env.port || 5000
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin:'https://mern-stack-todo-fe.vercel.app',
+    methods:['GET','POST','PUT','DELETE'],
+    credentials:true
+}))
 
 
 mongoose
