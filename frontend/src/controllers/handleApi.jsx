@@ -2,7 +2,7 @@ import axios from "axios";
 const baseURL = "http://localhost:5000"
 const getAllTodo =(setToDo) => {
     axios
-    .get(baseURL)
+    .get("http://localhost:5000")
     .then(({data}) =>{
         console.log("Data==>" , data)
         setToDo(data)
