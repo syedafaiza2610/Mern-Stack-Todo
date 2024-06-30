@@ -4,8 +4,11 @@
   "description": "",
   "main": "Server.js",
   "scripts": {
-    "start": "nodemon Server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node Server.js",
+    "dev": "nodemon Server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build": "echo hello",
+    "build": "npm run vercel-build"
   },
   "author": "",
   "license": "ISC",

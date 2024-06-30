@@ -5,7 +5,7 @@ const cors =  require('cors')
 
 
 
-require('dotenv').config()
+require('dotenv').config({ path: '../.env' })
 
 
 const app = express()
@@ -14,10 +14,11 @@ app.use(express.json())
 app.use(cors())
 
 mongoose
-.connect("mongodb+srv://syedafaiza2610:faizanaqi123@clustor1.jukqksg.mongodb.net/")
+.connect(process.env.MONGO_URI)
 .then(() => console.log("Database Connected"))
 .catch((err) => console.log(err))
 app.use(routes)
 
 
+app.get("/test", (req, res) => res.send("todo server is running on vercel"))
 app.listen(PORT, () => console.log(`Server is Running on: ${PORT} `))
